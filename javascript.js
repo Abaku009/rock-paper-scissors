@@ -6,12 +6,32 @@ function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 3) + 1;
 
     if(randomNumber === 1) {
-        console.log(choiceOne);
+        return choiceOne;
     } else if(randomNumber === 2) {
-        console.log(choiceTwo);
+        return choiceTwo;
     } else if(randomNumber === 3) {
-        console.log(choiceThree);
+        return choiceThree;
     }
 }
 
-getComputerChoice();
+function playRound(playerSelection, computerSelection) {
+    if(playerSelection === computerSelection) {
+        console.log("Tie!");
+    } else if(playerSelection === "Rock" && computerSelection === "Scissors") {
+        console.log("You WIN! Rock beats Scissors");
+    } else if(playerSelection === "Rock" && computerSelection === "Paper") {
+        console.log("You LOSE! Paper beats Rock");
+    } else if(playerSelection === "Paper" && computerSelection === "Rock") {
+        console.log("You WIN! Paper beats Rock");
+    } else if(playerSelection === "Paper" && computerSelection === "Scissors") {
+        console.log("You LOSE! Scissors beats Paper");
+    } else if(playerSelection === "Scissors" && computerSelection === "Rock") {
+        console.log("You LOSE! Rock beats Scissors");
+    } else if(playerSelection === "Scissors" && computerSelection === "Paper") {
+        console.log("You WIN! Scissors beats Paper");
+    } 
+    
+}
+
+let playerSelection = "Rock";
+let computerSelection = getComputerChoice();
