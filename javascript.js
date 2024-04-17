@@ -14,6 +14,11 @@ function getComputerChoice() {
     }
 }
 
+//console.log(getComputerChoice());
+
+let playerSelection = "Rock";
+let computerSelection = getComputerChoice();
+
 function playRound(playerSelection, computerSelection) {
     if(playerSelection === computerSelection) {
         console.log("Tie!");
@@ -30,8 +35,8 @@ function playRound(playerSelection, computerSelection) {
     } else if(playerSelection === "Scissors" && computerSelection === "Paper") {
         console.log("You WIN! Scissors beats Paper");
     } 
-    
 }
 
-let playerSelection = "Rock";
-let computerSelection = getComputerChoice();
+playRound(playerSelection, computerSelection);
+//playRound("Rock", getComputerChoice());
+
