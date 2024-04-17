@@ -1,6 +1,8 @@
 function getComputerChoice() {
-    console.log("Rock") || console.log("Paper") || console.log("Scissors");
-    
+    let choices = "Rock , Paper , Scissors";
+    let randomChoices = choices[Math.floor(Math.random() * choices.length)];
+
+    console.log(randomChoices);
 }
 
 getComputerChoice();
