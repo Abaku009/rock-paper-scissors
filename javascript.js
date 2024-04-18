@@ -50,7 +50,7 @@ function playGame() {
         console.log("Computer's choice is: ", computerSelection);
         console.log(playRound(playerSelection, computerSelection));
         let result = playRound(playerSelection, computerSelection);  
-        if(result == "Tie!") {
+        if(result === "Tie!") {
             yourScore = yourScore + 1;
             computerScore = computerScore + 1;
             console.log("Your score is: ", yourScore);
