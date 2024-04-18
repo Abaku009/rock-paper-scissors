@@ -65,7 +65,7 @@ function playGame() {
             yourScore = yourScore + 0;
             console.log("Computer's score is: ", computerScore);
             console.log("Your score is: ", yourScore);
-        } else {
+        } else if(result === "Your choice is not valid!") {
             yourScore = yourScore + 0;
             computerScore = computerScore + 0;
         }
