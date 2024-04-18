@@ -55,12 +55,12 @@ function playGame() {
             computerScore = computerScore + 1;
             console.log("Your score is: ", yourScore);
             console.log("Computer's score is: ", computerScore);
-        } else if(result === result.includes(winString)) {
+        } else if(result.includes(winString)) {
             yourScore = yourScore + 1;
             computerScore = computerScore + 0;
             console.log("Your score is: ", yourScore);
             console.log("Computer's score is: ", computerScore);
-        } else if(result === result.includes(loseString)) {
+        } else if(result.includes(loseString)) {
             computerScore = computerScore + 1;
             yourScore = yourScore + 0;
             console.log("Computer's score is: ", computerScore);
@@ -77,6 +77,7 @@ function playGame() {
         console.log("YOU ARE THE LOSER!");
     }
 }
+
 
 playGame();
 
