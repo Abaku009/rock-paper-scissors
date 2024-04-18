@@ -14,7 +14,7 @@ function getComputerChoice() {
     }
 }
 
-let playerSelection = "RoCk";
+let playerSelection = prompt("Choose: Rock or Paper or Scissors");
 let computerSelection = getComputerChoice();
 
 console.log("Computer's choice is:");
@@ -42,6 +42,41 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-console.log(playRound(playerSelection, computerSelection));
+//console.log(playRound(playerSelection, computerSelection));
 //console.log(playRound("Rock", getComputerChoice()));
+
+
+function playGame() {
+    let yourScore = 0;
+    let computerScore = 0;
+    let winString = "WIN";
+    let loseString = "LOSE";
+    for (let i = 1; i <= 5; i++) { 
+        let result = playRound(playerSelection, computerSelection);   
+        if(result === "Tie!") {
+            yourScore = yourScore + 1;
+            computerScore = computerScore + 1;
+            console.log("Your score is: ", yourScore);
+            console.log("Computer's score is: ", computerScore);
+        } else if(result === result.includes(winString)) {
+            yourScore = yourScore + 1;
+            computerScore = computerScore + 0;
+            console.log("Your score is: ", yourScore);
+            console.log("Computer's score is: ", computerScore);
+        } else if(result === result.includes(loseString)) {
+            computerScore = computerScore + 1;
+            yourScore = yourScore + 0;
+            console.log("Computer's score is: ", computerScore);
+            console.log("Your score is: ", yourScore);
+        }
+    }
+
+    if(yourScore === 5 && computerScore === 5) {
+        console.log("IT'S A TIE!");
+    } else if(yourScore === 5) {
+        console.log("YOU ARE THE WINNER!");
+    } else if(computerScore === 5) {
+        console.log("YOU ARE THE LOSER!");
+    }
+}
 
