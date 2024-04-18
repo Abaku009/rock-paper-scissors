@@ -14,7 +14,8 @@ function getComputerChoice() {
     }
 }
 
-//console.log(getComputerChoice());
+console.log("Computer's choice is:");
+console.log(getComputerChoice());
 
 let playerSelection = "RoCk";
 let computerSelection = getComputerChoice();
@@ -37,7 +38,7 @@ function playRound(playerSelection, computerSelection) {
     } else if(playerSelection === "scissors" && computerSelection === "paper") {
         console.log("You WIN! Scissors beats Paper");
     } else {
-        console.log("You didn't choose valid!");
+        console.log("Your choice is not valid!");
     }
 }
 
