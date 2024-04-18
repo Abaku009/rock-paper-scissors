@@ -14,11 +14,11 @@ function getComputerChoice() {
     }
 }
 
-console.log("Computer's choice is:");
-console.log(getComputerChoice());
-
 let playerSelection = "RoCk";
 let computerSelection = getComputerChoice();
+
+console.log("Computer's choice is:");
+console.log(computerSelection);
 
 function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
