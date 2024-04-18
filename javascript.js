@@ -24,24 +24,24 @@ function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
     if(playerSelection === computerSelection) {
-        console.log("Tie!");
+        return "Tie!";
     } else if(playerSelection === "rock" && computerSelection === "scissors") {
-        console.log("You WIN! Rock beats Scissors");
+        return "You WIN! Rock beats Scissors";
     } else if(playerSelection === "rock" && computerSelection === "paper") {
-        console.log("You LOSE! Paper beats Rock");
+        return "You LOSE! Paper beats Rock";
     } else if(playerSelection === "paper" && computerSelection === "rock") {
-        console.log("You WIN! Paper beats Rock");
+        return "You WIN! Paper beats Rock";
     } else if(playerSelection === "paper" && computerSelection === "scissors") {
-        console.log("You LOSE! Scissors beats Paper");
+        return "You LOSE! Scissors beats Paper";
     } else if(playerSelection === "scissors" && computerSelection === "rock") {
-        console.log("You LOSE! Rock beats Scissors");
+        return "You LOSE! Rock beats Scissors";
     } else if(playerSelection === "scissors" && computerSelection === "paper") {
-        console.log("You WIN! Scissors beats Paper");
+        return "You WIN! Scissors beats Paper";
     } else {
-        console.log("Your choice is not valid!");
+        return "Your choice is not valid!";
     }
 }
 
-playRound(playerSelection, computerSelection);
-//playRound("Rock", getComputerChoice());
+console.log(playRound(playerSelection, computerSelection));
+//console.log(playRound("Rock", getComputerChoice()));
 
