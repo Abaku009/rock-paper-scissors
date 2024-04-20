@@ -46,31 +46,36 @@ function playGame() {
     for (let i = 1; i <= 5; i++) { 
         let playerSelection = prompt("Choose: Rock or Paper or Scissors");
         let computerSelection = getComputerChoice();
+        let result = playRound(playerSelection, computerSelection); 
         console.log("Your choice is: ", playerSelection);
-        console.log("Computer's choice is: ", computerSelection);
-        console.log(playRound(playerSelection, computerSelection));
-        let result = playRound(playerSelection, computerSelection);  
-        if(result === "Tie!") {
+        if(result === "Your choice is not valid!") {
+            console.log(playRound(playerSelection, computerSelection));
+            yourScore = yourScore + 0;
+            computerScore = computerScore + 0;
+            console.log("Your score is: ", yourScore);
+            console.log("Computer's score is: ", computerScore);
+        } else if(result === "Tie!") {
             yourScore = yourScore + 1;
             computerScore = computerScore + 1;
+            console.log("Computer's choice is: ", computerSelection);
+            console.log(playRound(playerSelection, computerSelection));
             console.log("Your score is: ", yourScore);
             console.log("Computer's score is: ", computerScore);
         } else if(result.includes(winString)) {
             yourScore = yourScore + 1;
             computerScore = computerScore + 0;
+            console.log("Computer's choice is: ", computerSelection);
+            console.log(playRound(playerSelection, computerSelection));
             console.log("Your score is: ", yourScore);
             console.log("Computer's score is: ", computerScore);
         } else if(result.includes(loseString)) {
             computerScore = computerScore + 1;
             yourScore = yourScore + 0;
+            console.log("Computer's choice is: ", computerSelection);
+            console.log(playRound(playerSelection, computerSelection));
             console.log("Computer's score is: ", computerScore);
             console.log("Your score is: ", yourScore);
-        } else if(result === "Your choice is not valid!") {
-            yourScore = yourScore + 0;
-            computerScore = computerScore + 0;
-            console.log("Your score is: ", yourScore);
-            console.log("Computer's score is: ", computerScore);
-        }
+        } 
     }
 
 
